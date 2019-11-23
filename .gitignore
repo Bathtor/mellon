@@ -1,2 +1,36 @@
 *.class
 *.log
+
+*.class
+*.log
+
+# sbt specific
+.cache
+.cache-main
+.history
+.lib/
+dist/*
+resolution-cache/
+streams/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+project/target/
+project/project/
+target/
+
+# OS X
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+.DS_Store
+
+# Metals / VSC
+out/
+.bloop/
+.metals/
+*.code-workspace
+.vscode
