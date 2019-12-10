@@ -59,7 +59,7 @@ class PasswordField(val idField: String,
       hiddenField.`type` = "input";
       hiddenField.select(); //.setSelectionRange(0, inner.value.length());
       document.execCommand("copy");
-      println("Copied text!");
+      scribe.info("Copied text!");
       hiddenField.value = "";
       hiddenField.`type` = "hidden";
     };
@@ -68,6 +68,9 @@ class PasswordField(val idField: String,
 
   def updateValue(newValue: String): Unit = {
     inner.value = newValue;
+  }
+  def getValue(): String = {
+    inner.value
   }
 }
 object PasswordField {

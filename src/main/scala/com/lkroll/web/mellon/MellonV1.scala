@@ -3,7 +3,7 @@ package com.lkroll.web.mellon
 import org.scalajs.dom
 import scalatags.JsDom.all._
 
-object OldMellon extends Page {
+object MellonV1 extends Page {
 
   private val speakFriend =
     PasswordField(idField = "speakFriend",
@@ -17,8 +17,8 @@ object OldMellon extends Page {
     PasswordField(idField = "andEnter", placeholderText = "and enter...", editable = false, maxLength = 20);
   private val container =
     div(
-      id := "old-mellon", //
-      h2("Version 1 Compatibility Mode"), //
+      id := this.identifier(), //
+      h2(this.title()), //
       div(
         id := "mask", //
         form(
@@ -33,14 +33,19 @@ object OldMellon extends Page {
     ).render;
 
   override def title(): String = "Version 1 Compatibility Mode";
+  override def identifier(): String = "mellon-v1";
 
   override def render(target: dom.html.Element): Unit = {
     target.appendChild(container);
   }
 
-  override def show(): Unit = {}
+  override def show(): Unit = {
+    container.classList.remove(Page.hiddenClass);
+  }
 
-  override def hide(): Unit = {}
+  override def hide(): Unit = {
+    container.classList.add(Page.hiddenClass);
+  }
 
   private def calculateHash(inputString: String): Unit = {
     val hash = PassphraseHashOld.hash(inputString);
