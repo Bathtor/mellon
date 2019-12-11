@@ -29,3 +29,7 @@ As remembering all this silly information for every single website is pretty muc
 
 ## Tracking
 In order to get an idea of the usage of website, we use [Simple Analytics](https://simpleanalytics.com/). It is a very transparent traffic analyser, that respects browser's "do not track" flag. If that is still a dealbreaker for you, simply prohibit the loading of anything from `https://sa.lkroll.com` in your browser, and absolutely nothing will be tracked in any way.
+
+## License
+
+Mellon 2.x is licensed under the terms of the MIT license.
