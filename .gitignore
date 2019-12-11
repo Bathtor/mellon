@@ -4,6 +4,8 @@
 *.class
 *.log
 
+assembly/
+
 # sbt specific
 .cache
 .cache-main

@@ -6,7 +6,7 @@ name := "Mellon"
 
 organization := "com.lkroll.web"
 
-version := "0.2.0"
+version := "2.0.0"
 
 scalaVersion := "2.12.10"
 
@@ -34,6 +34,6 @@ buildInfoPackage := "com.lkroll.web.mellon"
 //bootSnippet := "com.larskroll.ep.mapviewer.Main().main();"
 //refreshBrowsers <<= refreshBrowsers.triggeredBy(fastOptJS in Compile)
 //localUrl := ("lkroll.sics.se", 12345)
-//localUrl := ("192.168.0.106", 12345)
+localUrl := ("192.168.0.102", 12345)
 //localUrl := ("10.112.11.78", 12345)
-localUrl := ("localhost", 12345)
+//localUrl := ("localhost", 12345)

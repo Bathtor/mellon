@@ -51,7 +51,7 @@ object PassphraseHashNew {
         required -= c;
       }
       val remaining = new String(required.toArray);
-      s"${encoded}${remaining}"
+      s"${remaining}${encoded}"
     }
   }
 
