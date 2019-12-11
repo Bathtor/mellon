@@ -13,7 +13,7 @@ The most recent release is [2.0.0](https://github.com/Bathtor/mellon/releases/ta
 
 The idea of mellon is that you pick yourself a parametrised passphrase for all websites you use and which you can remember. The parameters you choose you adjust for every individual website. You can pick whatever parameters you need, but we recommend to include at least a version number (in case you needed to reset your password at some point) and something that is unique for the website, such as its name or root url, for example.
 
-For example, I could say that my parametrised passphrase is "Every <version> idiot can use <website> easily." where `<version>` is where you insert the current version number and `<website>` is where you place the name of the website you are generating a password for.
+For example, I could say that my parametrised passphrase is `Every <version> idiot can use <website> easily.` where `<version>` is where you insert the current version number and `<website>` is where you place the name of the website you are generating a password for.
 
 Now you have a consistent way of creating a long password for every website, by using the passphare with unique parameters. Of course, you **never ever** write down your passphare or tell it to **anyone**! It is only in your head, so pick something you can remember. Make it rhyme, if that helps you remember it.
 
