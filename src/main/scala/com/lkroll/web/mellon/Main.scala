@@ -1,10 +1,9 @@
 package com.lkroll.web.mellon
 
 import org.scalajs.dom
-import org.scalajs.dom.document
-import org.scalajs.dom.window
 import org.scalajs.dom.html.Element
 import scalatags.JsDom.all._
+import org.scalajs.dom.raw.HashChangeEvent
 
 object Main {
 
@@ -19,12 +18,12 @@ object Main {
   def main(_args: Array[String]) {
     //println(s"Args: ${args.mkString}");
 
-    val nojs = document.body.children.namedItem("nojs");
-    document.body.removeChild(nojs);
+    val nojs = dom.document.body.children.namedItem("nojs");
+    dom.document.body.removeChild(nojs);
     val navigation = div(id := "navi").render;
     val main = div(id := "main", h1("Mellon"), navigation).render;
     val content = div(id := "content", main).render;
-    document.body.appendChild(content);
+    dom.document.body.appendChild(content);
     val navList = for (page <- pages) yield {
       page.render(main);
       page.hide();
@@ -45,10 +44,15 @@ object Main {
     };
     setActive(Left(urlPage));
 
-    window.onhashchange = (_) => this.updateActivePage();
+    //dom.window.onhashchange = this.updateActivePage(_);
+    dom.window.addEventListener("hashchange", this.updateActivePage(_), false);
+    // = (e: HashChangeEvent) => {
+    //   scribe.info(s"Got a HashChangeEvent $e");
+    //   this.updateActivePage()
+    // }
   }
 
-  private def updateActivePage(): Unit = {
+  private def updateActivePage(e: HashChangeEvent): Unit = {
     val id = dom.window.location.hash;
     scribe.info(s"New anchor is ${id}");
     val idNoHash = id.replace("#", "");
