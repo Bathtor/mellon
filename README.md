@@ -5,7 +5,7 @@ You can even download the code and run it completely offline (you may be missing
 
 ## Deployment
 
-This code is currently deployed at [mellon.lkroll.com](https://mellon.lkroll.com).
+~~This code is currently deployed at [mellon.lkroll.com](https://mellon.lkroll.com).~~ No longer deployed. If you still need it feel free to self-host or run locally.
 
 The most recent release is [2.0.0](https://github.com/Bathtor/mellon/releases/tag/v2.0.0).
 
